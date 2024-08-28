@@ -5,65 +5,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #f0f0f0;
-    /* Fallback color */
     height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    /* Align content vertically */
-    align-items: flex-start;
-    /* Align items to the left */
-    padding: 20px;
-    margin: 105px 0 0 20px;
-    /* Position container on the left */
-    background: rgba(169, 160, 160, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(181, 164, 164, 0.3);
-    width: 300px;
-    /* Set a fixed width for the container */
-    max-width: 100%;
-    /* Ensure container does not exceed screen width */
-}
-
-.location-weather {
-    text-align: center;
-    /* Align text to the left */
-    margin-bottom: 20px;
-    /* Spacing between elements */
-}
-
-h1 {
-    font-size: 24px;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-    /* Darker shade on hover */
-}
-
-.info {
-    margin-top: 20px;
 }
 
 nav {
@@ -86,9 +30,46 @@ nav h3 {
     text-transform: uppercase;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 45px 10px 10px 20px;
+    background: rgba(169, 160, 160, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(181, 164, 164, 0.3);
+    width: 300px;
+    max-width: 100%;
+}
+
+.location-weather {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-info i {
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.temperature {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.additional-info {
+    text-align: left;
+}
+
 footer {
     background: rgba(51, 51, 51, 0.7);
-    /* Transparent background */
     color: white;
     padding: 10px;
     text-align: center;
@@ -97,38 +78,87 @@ footer {
     bottom: 0;
 }
 
-footer p {
-    margin: 0;
-}
-
-footer .social-icons {
-    margin-top: 5px;
-}
-
 footer .social-icons a {
     color: white;
     margin: 0 10px;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 
-footer .social-icons a:hover {
-    color: #ddd;
+.weather-info img {
+    width: 100px;
+    /* Set the width of the weather icon */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
+/* Style for the search section */
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    /* Light transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    /* Center align the search section */
+}
+
+/* Style for the input field */
+#searchLocation {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    margin-right: 10px;
+    /* Space between input and button */
+    transition: border-color 0.3s;
+}
+
+#searchLocation:focus {
+    border-color: #007BFF;
+    /* Highlight border on focus */
+}
+
+/* Style for the search button */
+#searchButton {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+/* Media query for responsiveness */
 @media (max-width: 768px) {
-    .container {
-        margin: 20px;
-        /* Adjust margin for smaller screens */
-        width: auto;
-        /* Allow width to adjust on smaller screens */
-    }
-
-    nav {
+    .search-section {
         flex-direction: column;
-        text-align: center;
+        /* Stack input and button vertically on smaller screens */
+        max-width: 90%;
     }
 
-    footer {
-        font-size: 0.8rem;
+    #searchLocation {
+        margin: 0 0 10px 0;
+        /* Adjust margin for input on smaller screens */
+        width: 100%;
+    }
+
+    #searchButton {
+        width: 100%;
     }
 }

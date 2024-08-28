@@ -18,11 +18,31 @@
 
     <div class="container">
         <div class="location-weather">
-            <h4 id="userLocation">Istanbul</h4>
-            <p id="userTemperature">24°C</p>
-            <p id="userDescription">clear sky</p>
+            <h2 id="userLocation">Loading...</h2>
+            <div class="weather-info">
+                <img id="weatherIcon" src="" alt="Weather Icon" /> <!-- Weather icon element -->
+                <div class="temperature">
+                    <p id="userTemperature">--°C</p>
+                </div>
+            </div>
+            <div class="description">
+                <p id="userDescription">Loading weather...</p>
+            </div>
+            <div class="additional-info">
+                <p id="precipitation">Precipitation: --%</p>
+                <p id="humidity">Humidity: --%</p>
+                <p id="wind">Wind: -- km/h</p>
+            </div>
         </div>
-    </div>
+        <div class="more-details">
+            <div id="dateTime"></div>
+        </div>
+
+        <!-- Search section -->
+        <div class="search-section">
+            <input type="text" id="searchLocation" placeholder="Enter location">
+            <button id="searchButton">Search</button>
+        </div>
     </div>
 
     <footer>
