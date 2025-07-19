@@ -1,6 +1,4 @@
-Whether App
-
-Steps:
-1. First Create  HTML
-2. Put the CSS for the exisiting HTML
-3. Use API with JavaScript to get the whether.
+ClearSky is a lightweight and responsive weather forecasting web application designed to provide users with real-time weather updates for any location worldwide. 
+Developed using pure JavaScript, HTML, and CSS, the app fetches live data from a weather API and displays key information such as temperature, humidity, wind speed, and weather conditions through a clean and intuitive interface.
+With a focus on performance and usability, 
+ClearSky delivers accurate forecasts with a sleek, modern design—making it both functional and visually appealing across devices.
