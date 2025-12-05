@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wether Application</title>
+    <title>Weather Application</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    
+
+    <nav>
+        <h3>Weather App 1.0</h3>
+    </nav>
+
     <div class="container">
-       <h1>Wether Application</h1>
-       <input type="text" id="searchLocation" placeholder="Enter your Location">
-       <button id="searchButton">Click to Search</button>
-       <div class="info">
-            <h4 id="location"></h4>
-            <p id="temperature"></p>
-            <p id="description"></p>
-       </div>
-        
+        <div class="location-weather">
+            <h2 id="userLocation">Loading...</h2>
+            <div class="weather-info">
+                <img id="weatherIcon" src="" alt="Weather Icon" /> <!-- Weather icon element -->
+                <div class="temperature">
+                    <p id="userTemperature">--°C</p>
+                </div>
+            </div>
+            <div class="description">
+                <p id="userDescription">Loading weather...</p>
+            </div>
+            <div class="additional-info">
+                <p id="precipitation">Precipitation: --%</p>
+                <p id="humidity">Humidity: --%</p>
+                <p id="wind">Wind: -- km/h</p>
+            </div>
+        </div>
+        <div class="more-details">
+            <div id="dateTime"></div>
+        </div>
+
+        <!-- Search section -->
+        <div class="search-section">
+            <input type="text" id="searchLocation" placeholder="Enter location">
+            <button id="searchButton">Search</button>
+        </div>
     </div>
-    <script src="script.js" ></script>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
